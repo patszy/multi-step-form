@@ -1,0 +1,14 @@
+:root {
+  --color-white: ;
+  --color-black: ;
+  --color-accent1: ;
+  --color-accent2: ;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=main.css.map */
