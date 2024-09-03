@@ -1,14 +1,81 @@
-:root {
-  --color-white: ;
-  --color-black: ;
-  --color-accent1: ;
-  --color-accent2: ;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(210, 11%, 15%);
+}
+
+html {
+  font: 16px;
 }
 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: hsl(210, 11%, 15%);
+}
+
+html {
+  font: 16px;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.multistep__header {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.multistep {
+  padding: 1.5rem;
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 0.4rem;
+  font: 1rem "Courier new", courier, monospace;
+}
+
+.card {
+  display: none;
+  flex-direction: column;
+}
+.card label {
+  margin-block: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.card input {
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.5rem;
+  font: 1rem "Courier new", courier, monospace;
+}
+
+.card--active {
+  display: flex;
+}
+
+.multistep__button {
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  background: none;
 }
 
 /*# sourceMappingURL=main.css.map */

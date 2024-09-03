@@ -4,8 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi Step Form</title>
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-  
+  <!-- EMMET: 
+    form.multistep>div.multistep__card[data-step]*3>(label[for=""]+input[type="text" name="" id=""])*3^button[type="button"]{next}*2
+  -->
+  <section class="multistep">
+    <header class="multistep__header">
+      <h1>Step 1</h1>
+    </header>
+    <form action="#" class="multistep__form">
+      <div class="card card--active" data-step="">
+        <label for="login">login</label>
+        <input type="text" name="login" id="login">
+        <label for="password">password</label>
+        <input type="password" name="password" id="password">
+        <label for="confirm">confirm password</label>
+        <input type="password" name="confirm" id="confirm">
+      </div>
+      <div class="card" data-step="">
+        <label for="name">first name</label>
+        <input type="text" name="name" id="name">
+        <label for="surname">last name</label>
+        <input type="text" name="surname" id="surname">
+        <label for="birthday">date of birth</label>
+        <input type="date" name="birthday" id="birthday">
+      </div>
+      <div class="card" data-step="">
+        <label for="email">email</label>
+        <input type="email" name="email" id="email">
+        <label for="phone">phone</label>
+        <input type="phone" name="phone" id="phone">
+        <label for="address">address</label>
+        <input type="text" name="address" id="address" placeholder="43-600 City Street Number">
+      </div>
+      <button class="multistep__button" type="button">previous</button>
+      <button class="multistep__button" type="button">next</button>
+    </form>
+  </section>
 </body>
 </html>
