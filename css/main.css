@@ -3,6 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   color: hsl(210, 11%, 15%);
+  background: hsl(210, 17%, 98%);
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *, *::before, *::after {
@@ -10,6 +21,7 @@
   padding: 0;
   box-sizing: border-box;
   color: hsl(210, 11%, 15%);
+  background: hsl(210, 17%, 98%);
 }
 
 html, body {
