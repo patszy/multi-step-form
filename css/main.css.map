@@ -1,5 +1,1 @@
-<<<<<<< Updated upstream
-{"version":3,"sourceRoot":"","sources":["base.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA","file":"main.css"}
-=======
-{"version":3,"sourceRoot":"","sources":["base.scss","main.scss"],"names":[],"mappings":"AAMA;EACE;EACA;EACA;EACA,OATY;;;AAYd;EACE;;;AARF;EACE;EACA;EACA;EACA,OATY;;;AAYd;EACE;;;ACEF;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EAjBE;EAmBA;EACA;;;AAGF;EAvBE;EALA;EACA;EA8BA,MD/BK;;;ACkCP;EACE;EACA;;AAMA;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EAnDA;EACA;EAQA;EA6CE,MDtDG;;;AC0DP;EACE;;;AAGF;EA9DE;EACA;EAQA;EAJA;EA6DA;EACA;EACA;EACA;EACA","file":"main.css"}
->>>>>>> Stashed changes
+{"version":3,"sourceRoot":"","sources":["base.scss","main.scss"],"names":[],"mappings":"AAMA;EACE;EACA;EACA;EACA,OATY;;;AAKd;EACE;EACA;EACA;EACA,OATY;;;ACed;EACE;;;AAGF;EACE;EACA;EACA;;;AAGF;EAjBE;EALA;EACA;EAwBA,MDzBK;;AC2BL;EAtBA;EAwBE;EACA;;AAGF;EAjCA;EACA;EAQA;EAJA;EAgCE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;;;AAKN;EACE;;AAEA;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAGF;EApEA;EACA;EAQA;EA8DE,MDvEG","file":"main.css"}

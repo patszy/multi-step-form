@@ -24,24 +24,41 @@ body {
   align-items: center;
 }
 
-.multistep__header {
-  @include setSpace(margin-bottom);
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .multistep {
   @include setSpace(padding);
   @include setBorder;
   font: $font;
+
+  &__header {
+    @include setSpace(margin-bottom);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__button {
+    @include setBorder;
+    @include setPadding;
+    @include setSpace(margin-top);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    background: none;
+    box-shadow: 0 .3rem black;
+
+    &:hover {
+      transform: translateY(.2rem);
+      box-shadow: 0 .1rem;
+    }
+  }
 }
 
 .card {
   display: none;
-  flex-direction: column;
-  
-  &:not(:first-of-type){
-    // display: none;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
   }
 
   label {
@@ -58,19 +75,4 @@ body {
     @include setPadding;
     font: $font;
   }
-}
-
-.card--active {
-  display: flex;
-}
-
-.multistep__button {
-  @include setBorder;
-  @include setPadding;
-  @include setSpace(margin-top);
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  text-transform: uppercase;
-  background: none;
 }
