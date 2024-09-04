@@ -36,6 +36,7 @@
     text-transform: uppercase;
     background: none;
     box-shadow: 0 $shadowSize black;
+    cursor: pointer;
 
     &:hover {
       transform: translateY($effectSize);
