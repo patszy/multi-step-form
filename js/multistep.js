@@ -6,14 +6,18 @@ let prevBtn = document.getElementById(`prev`);
 let currentCard = [...cards].filter(card => card.classList.contains(`card--active`))[0];
 let currentStep = [...cards].indexOf(currentCard);
 
+let getCurrentCard = (cards) => cards.filter(card => card.classList.contains(`card--active`))[0];
+let removeClass = (card, name) => card.classList.remove(name);
+let addClass = (card, name) => card.classList.add(name);
+
 nextBtn.addEventListener(`click`, () => {
-  currentCard = [...cards].filter(card => card.classList.contains(`card--active`))[0];
-  currentCard.classList.remove(`card--active`);
-  cards[++currentStep].classList.add(`card--active`);
+  currentCard = getCurrentCard([...cards]);
+  removeClass(currentCard, `card--active`);
+  addClass(cards[++currentStep], `card--active`);
 });
 
 prevBtn.addEventListener(`click`, () => {
-  currentCard = [...cards].filter(card => card.classList.contains(`card--active`))[0];
-  currentCard.classList.remove(`card--active`);
-  cards[--currentStep].classList.add(`card--active`);
+  currentCard = getCurrentCard([...cards]);
+  removeClass(currentCard, `card--active`);
+  addClass(cards[--currentStep], `card--active`);
 });
