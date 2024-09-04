@@ -1,23 +1,19 @@
 console.log("Hello World!");
 
-let cards = document.getElementsByClassName(`card`);
-let nextBtn = document.getElementById(`next`);
-let prevBtn = document.getElementById(`prev`);
-let currentCard = [...cards].filter(card => card.classList.contains(`card--active`))[0];
-let currentStep = [...cards].indexOf(currentCard);
+const multistepForm = document.getElementsByClassName(`multistep__form`)[0];
+const formCards = [...multistepForm.getElementsByClassName(`card`)];
+let currentStep = formCards.findIndex(step => step.classList.contains(`card--active`));
 
-let getCurrentCard = (cards) => cards.filter(card => card.classList.contains(`card--active`))[0];
-let removeClass = (card, name) => card.classList.remove(name);
-let addClass = (card, name) => card.classList.add(name);
+if(currentStep < 0) formCards[currentStep = 0].classList.add(`card--active`);
 
-nextBtn.addEventListener(`click`, () => {
-  currentCard = getCurrentCard([...cards]);
-  removeClass(currentCard, `card--active`);
-  addClass(cards[++currentStep], `card--active`);
-});
+const showCurrentCard = () => {
+  formCards.forEach((card, index) => card.classList.toggle(`card--active`, index === currentStep));
+}
 
-prevBtn.addEventListener(`click`, () => {
-  currentCard = getCurrentCard([...cards]);
-  removeClass(currentCard, `card--active`);
-  addClass(cards[--currentStep], `card--active`);
+multistepForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  if(e.target.matches(`#next`)) currentStep++;
+  else if(e.target.matches(`#prev`)) currentStep--;
+  
+  showCurrentCard();
 });

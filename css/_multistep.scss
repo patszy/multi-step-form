@@ -1,16 +1,16 @@
 @import 'base.scss';
 
-@mixin setBorder {
-  border: 1px solid hsl(0, 0%, 0%);
-  border-radius: .4rem;
+@mixin setBorder($property: border, $value: 1px solid $c-black, $radius: .4rem) {
+  #{$property}: $value;
+  border-radius: $radius;
 }
 
-@mixin setSpace($property) {
-  #{$property}: 1.5rem;
+@mixin setSpace($property: margin, $value: 1.5rem) {
+  #{$property}: $value;
 }
 
-@mixin setPadding {
-  padding: .3rem .5rem;
+@mixin setPadding($property: padding, $value: .3rem .5rem) {
+  #{$property}: $value;
 }
 
 .multistep {
@@ -28,16 +28,18 @@
     @include setBorder;
     @include setPadding;
     @include setSpace(margin-top);
-    font-size: 1.2rem;
+    font: $font;
+    $effectSize: .2rem;
+    $shadowSize: .3rem;
+    font-size: $fs-medium;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
     text-transform: uppercase;
     background: none;
-    box-shadow: 0 .3rem black;
+    box-shadow: 0 $shadowSize black;
 
     &:hover {
-      transform: translateY(.2rem);
-      box-shadow: 0 .1rem;
+      transform: translateY($effectSize);
+      box-shadow: 0 $shadowSize - $effectSize;
     }
   }
 }
@@ -46,13 +48,12 @@
   display: none;
 
   &--active {
-    display: flex;
-    flex-direction: column;
+    display: grid;
   }
 
   label {
     margin-block: .5rem;
-    font-size: 1.1rem;
+    font-size: $fs-medium;
     font-weight: bold;
     letter-spacing: .05rem;
     display: inline-block;
