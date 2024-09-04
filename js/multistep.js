@@ -12,8 +12,16 @@ const showCurrentCard = () => {
 
 multistepForm.addEventListener("click", (e) => {
   e.preventDefault();
-  if(e.target.matches(`#next`)) currentStep++;
-  else if(e.target.matches(`#prev`)) currentStep--;
-  
-  showCurrentCard();
+  let inc;
+  if(e.target.matches(`#next`)) inc = 1;
+  else if(e.target.matches(`#prev`)) inc = -1;
+  else return;
+
+  const inputs = [...formCards[currentStep].querySelectorAll(`input`)];
+  const allValid = inputs.every(input => input.reportValidity());
+
+  if(allValid) {
+    currentStep += inc;
+    showCurrentCard()
+  };
 });
