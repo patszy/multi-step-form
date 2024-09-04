@@ -1,0 +1,24 @@
+$c-white:	hsl(210, 17%, 98%);
+$c-black: hsl(210, 11%, 15%);
+$c-accent-light: hsl(190, 100%, 42%);
+$c-accent-dark: hsl(195, 100%, 39%);
+$font: 1rem "Courier new", courier, monospace;
+$fs-medium: 1.2rem; 
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $c-black;
+  background: $c-white;
+}
+
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

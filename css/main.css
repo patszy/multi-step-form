@@ -6,7 +6,7 @@
   background: hsl(210, 17%, 98%);
 }
 
-html, body {
+body {
   height: 100vh;
 }
 
@@ -24,7 +24,7 @@ body {
   background: hsl(210, 17%, 98%);
 }
 
-html, body {
+body {
   height: 100vh;
 }
 
@@ -36,7 +36,7 @@ body {
 
 .multistep {
   padding: 1.5rem;
-  border: 1px solid hsl(0, 0%, 0%);
+  border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
   font: 1rem "Courier new", courier, monospace;
 }
@@ -46,13 +46,13 @@ body {
   text-align: center;
 }
 .multistep__button {
-  border: 1px solid hsl(0, 0%, 0%);
+  border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
   padding: 0.3rem 0.5rem;
   margin-top: 1.5rem;
+  font: 1rem "Courier new", courier, monospace;
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: "Courier New", Courier, monospace;
   text-transform: uppercase;
   background: none;
   box-shadow: 0 0.3rem black;
@@ -66,19 +66,18 @@ body {
   display: none;
 }
 .card--active {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 .card label {
   margin-block: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   display: inline-block;
   text-transform: uppercase;
 }
 .card input {
-  border: 1px solid hsl(0, 0%, 0%);
+  border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
   padding: 0.3rem 0.5rem;
   font: 1rem "Courier new", courier, monospace;
