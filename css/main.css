@@ -35,53 +35,100 @@ body {
 }
 
 .multistep {
-  padding: 1.5rem;
+  font: bold 1rem "Courier new", courier, monospace;
+  text-transform: none;
+  letter-spacing: 0.05rem;
+  position: relative;
+}
+.multistep-header {
+  font: bold 0.8rem "Courier new", courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.multistep-header ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+.multistep-header__elem {
+  counter-increment: step 1;
+}
+.multistep-header__elem::before {
   border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
-  font: 1rem "Courier new", courier, monospace;
+  margin: 0 auto 0.5rem;
+  content: counter(step);
+  display: block;
+  width: 2rem;
+  line-height: 2rem;
 }
-.multistep__header {
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
-  text-align: center;
+.multistep-header__elem--active::before {
+  background: hsl(190, 100%, 42%);
+}
+.multistep-form {
+  border: 1px solid hsl(210, 11%, 15%);
+  border-radius: 0.4rem;
+  padding: 1.5rem;
+  box-shadow: -0.3rem 0.3rem black;
+}
+.multistep-buttons {
+  margin-block: 1.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .multistep__button {
   border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
   padding: 0.3rem 0.5rem;
-  margin-top: 1.5rem;
-  font: 1rem "Courier new", courier, monospace;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font: bold 1.2rem "Courier new", courier, monospace;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
   background: none;
   box-shadow: 0 0.3rem black;
   cursor: pointer;
 }
 .multistep__button:hover {
+  background: hsl(190, 100%, 42%);
   transform: translateY(0.2rem);
   box-shadow: 0 0.1rem;
 }
 
 .card {
   display: none;
+  border: none;
+  border-radius: 0.4rem;
+}
+.card__header {
+  margin-block: 1.5rem;
+  font: bold 1.7rem "Courier new", courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  color: hsl(190, 100%, 42%);
+  -webkit-text-stroke: 0.5px black;
 }
 .card--active {
   display: grid;
 }
 .card label {
-  margin-block: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font: bold 1.2rem "Courier new", courier, monospace;
+  text-transform: capitalize;
   letter-spacing: 0.05rem;
+  margin-block: 0.5rem;
   display: inline-block;
-  text-transform: uppercase;
 }
 .card input {
   border: 1px solid hsl(210, 11%, 15%);
   border-radius: 0.4rem;
   padding: 0.3rem 0.5rem;
   font: 1rem "Courier new", courier, monospace;
+  text-transform: none;
+  letter-spacing: 0.05rem;
 }
 
 /*# sourceMappingURL=main.css.map */

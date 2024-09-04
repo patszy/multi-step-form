@@ -1,5 +1,5 @@
-const multistepForm = document.getElementsByClassName(`multistep__form`)[0];
-const formCards = [...multistepForm.getElementsByClassName(`card`)];
+const multistepForm = document.querySelector(`[data-multistep-form]`);
+const formCards = [...multistepForm.querySelectorAll(`[data-step]`)];
 let currentCard = formCards.findIndex(step => step.classList.contains(`card--active`));
 
 //If no active card
@@ -13,9 +13,9 @@ multistepForm.addEventListener("click", (e) => {
   e.preventDefault();
   e.stopPropagation();
   //Listen event only if press button
-  if(!e.target.matches(`#next, #prev`)) return;
+  if(!e.target.matches(`[data-btn-prev], [data-btn-next]`)) return;
   //Switch left or right
-  const increment = e.target.id === `next` ? 1 : -1;
+  const increment = e.target.hasAttribute(`data-btn-next`) ? 1 : -1;
   
   const inputs = [...formCards[currentCard]?.querySelectorAll(`input`)];
   if(inputs.every(input => input.reportValidity())) {
