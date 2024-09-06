@@ -18,6 +18,15 @@
   - use deafault js methods
   - arrange code in functions
 
+# Problems 
+- (not solved) Animating card without using position absolute and static height
+- JS class selector (makes difficult to change styling class)
+- Buttons range of switching steps
+- Finding right index of current card
+- Toggle method (writing my own before i found out it has force attribute)
+- Arrange code in functions
+
+
 # Todo
 - Animate card switch
 - HTML or JS Validation
