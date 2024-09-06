@@ -1,0 +1,20 @@
+@import 'vars.scss';
+
+@mixin setBackground($background, $position: center, $size: $fs-medium) {
+  background: $background;
+  background-position: $position;
+  background-size: $size;
+}
+
+input {
+  &:invalid:focus {
+    @include setBackground(no-repeat url('../src/img/circle-xmark-solid.svg'), calc(100% - .25rem));
+    outline-color: $c-red;
+    color: $c-red;
+  }
+
+  &:valid:focus {
+    @include setBackground(no-repeat url('../src/img/circle-check-solid.svg'), calc(100% - .25rem));
+    outline-color: $c-green;
+  }
+}

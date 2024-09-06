@@ -27,7 +27,7 @@ const updateButtonStates = () => {
   formBtns[1].textContent = isLastCard ? 'submit' : 'next';
 }
 
-multistepForm.addEventListener("click", (e) => {
+multistepForm.addEventListener('click', (e) => {
   if(e.target.matches(`[data-btn-prev], [data-btn-next]`)) {
     e.preventDefault();
     e.stopPropagation();

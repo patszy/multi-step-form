@@ -20,17 +20,15 @@
 
 # Problems 
 - (not solved) Animating card without using position absolute and static height
+- (not solved) Input's background SVG red color is static
 - JS class selector (makes difficult to change styling class)
 - Buttons range of switching steps
 - Finding right index of current card
 - Toggle method (writing my own before i found out it has force attribute)
 - Arrange code in functions
 
-
 # Todo
-- Animate card switch
-- HTML or JS Validation
-- Objects
+- OOP
 
 # Done
 - Form structure
@@ -42,6 +40,7 @@
   - Mixin functions
   - Variables
   - Underscore (_) before sass files name
+  - Animate card switch
 - Optimise JS
   - Array functions
   - Use data-* attribute in selectors insted class
@@ -59,3 +58,6 @@
   - On first card prev btn display none
   - On last card next btn to submit
 - Add comments
+- Validation
+  - HTML
+  - JS

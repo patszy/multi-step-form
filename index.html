@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi Step Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <script src="./js/multistep.js" defer></script>
+  <script src="./js/validation.js" defer></script>
 </head>
 <body>
   <!-- EMMET: 
@@ -43,7 +45,7 @@
         <label for="email">email</label>
         <input type="email" name="email" id="email" required>
         <label for="phone">phone</label>
-        <input type="number" name="phone" id="phone">
+        <input type="text" name="phone" id="phone" pattern="[0-9]{9}">
       </fieldset>
       <div class="multistep-buttons">
         <button class="multistep__button" type="button" data-btn-prev>previous</button>

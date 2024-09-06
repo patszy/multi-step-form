@@ -50,6 +50,7 @@
         display: block;
         width: 2rem;
         line-height: 2rem;
+        transition: background-color .3s;
       }
 
       &--active::before {
@@ -84,6 +85,7 @@
     background: none;
     box-shadow: 0 $shadow-size-medium black;
     cursor: pointer;
+    transition: background-color .3s;
 
     &:hover {
       background: $c-accent-light;

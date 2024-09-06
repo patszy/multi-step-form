@@ -130,6 +130,7 @@ body::after {
   display: block;
   width: 2rem;
   line-height: 2rem;
+  transition: background-color 0.3s;
 }
 .multistep-header__elem--active::before {
   background: hsl(190, 100%, 42%);
@@ -162,6 +163,7 @@ body::after {
   background: none;
   box-shadow: 0 0.3rem black;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 .multistep__button:hover {
   background: hsl(190, 100%, 42%);
@@ -208,6 +210,20 @@ body::after {
   font: 1rem "Courier new", courier, monospace;
   text-transform: none;
   letter-spacing: 0.05rem;
+}
+
+input:invalid:focus {
+  background: no-repeat url("../src/img/circle-xmark-solid.svg");
+  background-position: calc(100% - 0.25rem);
+  background-size: 1.2rem;
+  outline-color: hsl(343, 79%, 44%);
+  color: hsl(343, 79%, 44%);
+}
+input:valid:focus {
+  background: no-repeat url("../src/img/circle-check-solid.svg");
+  background-position: calc(100% - 0.25rem);
+  background-size: 1.2rem;
+  outline-color: hsl(101, 100%, 35%);
 }
 
 /*# sourceMappingURL=main.css.map */
