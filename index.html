@@ -23,11 +23,11 @@
       <fieldset class="card" data-step>
         <legend class="card__header">create account</legend>
         <label for="login">login</label>
-        <input type="text" name="login" id="login">
+        <input type="text" name="login" id="login" required>
         <label for="password">password</label>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!$&#%])[A-Za-z\d!$&#%]{8,}$">
         <label for="confirm">confirm password</label>
-        <input type="password" name="confirm" id="confirm">
+        <input type="password" name="confirm" id="confirm" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!$&#%])[A-Za-z\d!$&#%]{8,}$">
       </fieldset>
       <fieldset class="card" data-step>
         <legend class="card__header">personal data</legend>
@@ -36,12 +36,12 @@
         <label for="surname">last name</label>
         <input type="text" name="surname" id="surname">
         <label for="birthday">date of birth</label>
-        <input type="date" name="birthday" id="birthday">
+        <input type="date" name="birthday" id="birthday" required min="1924-01-01" max="2006-01-01">
       </fieldset>
       <fieldset class="card" data-step>
         <legend class="card__header">contact</legend>
         <label for="email">email</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         <label for="phone">phone</label>
         <input type="number" name="phone" id="phone">
       </fieldset>

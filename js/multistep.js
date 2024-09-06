@@ -28,8 +28,10 @@ const updateButtonStates = () => {
 }
 
 multistepForm.addEventListener("click", (e) => {
-  e.preventDefault();
-  e.stopPropagation();
+  if(e.target.matches(`[data-btn-prev], [data-btn-next]`)) {
+    e.preventDefault();
+    e.stopPropagation();
+  }
 
   // Listen event only if button is pressed
   if(!e.target.matches(`[data-btn-prev], [data-btn-next]`)) return;
