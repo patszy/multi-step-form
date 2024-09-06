@@ -4,6 +4,7 @@
   box-sizing: border-box;
   color: hsl(210, 11%, 15%);
   background: hsl(210, 17%, 98%);
+  font: inherit;
 }
 
 body {
@@ -22,6 +23,7 @@ body {
   box-sizing: border-box;
   color: hsl(210, 11%, 15%);
   background: hsl(210, 17%, 98%);
+  font: inherit;
 }
 
 body {
@@ -109,8 +111,6 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   text-align: center;
-  color: hsl(190, 100%, 42%);
-  -webkit-text-stroke: 0.5px black;
 }
 .card--active {
   display: grid;

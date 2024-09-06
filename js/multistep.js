@@ -1,12 +1,17 @@
 const multistepForm = document.querySelector(`[data-multistep-form]`);
 const formCards = [...multistepForm.querySelectorAll(`[data-step]`)];
+const stepPoints = [...document.querySelectorAll(`[data-step-point]`)];
 let currentCard = formCards.findIndex(step => step.classList.contains(`card--active`));
 
 //If no active card
-if(currentCard < 0) formCards[currentCard = 0]?.classList.add(`card--active`);
+if(currentCard < 0) {
+  formCards[currentCard = 0]?.classList.add(`card--active`);
+  stepPoints[currentCard]?.classList.add(`multistep-header__elem--active`);
+}
 
 const showCurrentCard = () => {
   formCards.forEach((card, index) => card.classList.toggle(`card--active`, index === currentCard));
+  stepPoints.forEach((stepPoint, index) => stepPoint.classList.toggle(`multistep-header__elem--active`, index === currentCard));
 }
 
 multistepForm.addEventListener("click", (e) => {

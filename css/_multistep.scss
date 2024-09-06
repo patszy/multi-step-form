@@ -14,8 +14,8 @@
   #{$property}: $value;
 }
 
-@mixin setText($property: font, $value: bold 1rem $ff, $transform: none, $letter-spacing: $l-spacing) {
-  #{$property}: $value;
+@mixin setText($value: bold $fs-low $ff, $transform: none, $letter-spacing: $l-spacing) {
+  font: $value;
   text-transform: $transform;
   letter-spacing: $letter-spacing;
 }
@@ -25,7 +25,7 @@
   position: relative;
 
   &-header {
-    @include setText(font, bold .8rem $ff, uppercase);
+    @include setText(bold .8rem $ff, uppercase);
     text-align: center;
     position: absolute;
     top: -25%;
@@ -71,7 +71,7 @@
   &__button {
     @include setBorder;
     @include setPadding;
-    @include setText(font, bold $fs-medium $ff, capitalize);
+    @include setText(bold $fs-medium $ff, capitalize);
     background: none;
     box-shadow: 0 $shadow-size-medium black;
     cursor: pointer;
@@ -90,10 +90,8 @@
 
   &__header {
     @include setMargin(margin-block);
-    @include setText(font, bold 1.7rem $ff, uppercase);
+    @include setText(bold 1.7rem $ff, uppercase);
     text-align: center;
-    color: $c-accent-light;
-    -webkit-text-stroke: .5px black;
   }
 
   &--active {
@@ -101,7 +99,7 @@
   }
 
   label {
-    @include setText(font, bold $fs-medium $ff, capitalize);
+    @include setText(bold $fs-medium $ff, capitalize);
     margin-block: .5rem;
     display: inline-block;
   }
@@ -109,6 +107,6 @@
   input {
     @include setBorder;
     @include setPadding;
-    @include setText(font, $fs-low $ff);
+    @include setText($fs-low $ff);
   }
 }
