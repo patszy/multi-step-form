@@ -9,9 +9,13 @@
 - There are default, predefined methods in js for most problems
 - Optimisation process:
   - optimise only working code
-  - rewrite names
+  - rewrite names (descriptive name)
+  - create variables for complicated code (for readability)
+  - write if statement in variables for ternary operator (for readability)
   - delete redundation (use functions)
-  - use reverse thinking (for if statements)
+  - use reverse if statement (for less lines and nesting)
+  - use deafault js methods
+  - arrange code in functions
 
 # Todo
 - Animate card switch
@@ -41,6 +45,7 @@
   - Use spread operator insted of Array.from();
   - Simplify finding index of current card
   - Toggle method with second attribute
+  - Write if statement in variables for ternary operator
 - Buttons
   - On first card prev btn display none
   - On last card next btn to submit

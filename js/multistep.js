@@ -5,27 +5,26 @@ const formBtns = [...document.querySelectorAll(`[data-btn-prev], [data-btn-next]
 
 let currentCard = formCards.findIndex(step => step.classList.contains(`card--active`));
 
-// Set up card and step point
-const showCurrentCard = () => {
-  formCards.forEach((card, index) => card.classList.toggle(`card--active`, index === currentCard));
-  stepPoints.forEach((stepPoint, index) => stepPoint.classList.toggle(`multistep-header__elem--active`, index === currentCard));
+// Initialize form state
+const initForm = () => {
+  if(currentCard < 0) currentCard = 0;
+  updateFormState();
 }
 
-const toggleBtn = (btn, hide = true) => {
-  btn?.classList.toggle(`multistep__button--hide`, hide);
-}
+// Update card, step point visibility, buttons
+const updateFormState = () => {
+  formCards.forEach((card, index) => card.classList.toggle('card--active', index === currentCard));
+  stepPoints.forEach((stepPoint, index) => stepPoint.classList.toggle('multistep-header__elem--active', index === currentCard));
+  updateButtonStates();
+};
 
+// Update button states based on the current card
 const updateButtonStates = () => {
-  // Handle specific button visibility and labels for first and last step
-  formBtns[1].textContent = (currentCard === formCards.length - 1) ? `submit` : `next`;
-  currentCard === 0 ? toggleBtn(formBtns[0]) : toggleBtn(formBtns[0], false);
-}
-
-// Set up first card state
-if(currentCard < 0) {
-  formCards[currentCard = 0]?.classList.add(`card--active`);
-  stepPoints[currentCard]?.classList.add(`multistep-header__elem--active`);
-  toggleBtn(formBtns[0]);
+  const isFirstCard = currentCard === 0;
+  const isLastCard = currentCard === formCards.length - 1;
+  
+  formBtns[0]?.classList.toggle('multistep__button--hide', isFirstCard);
+  formBtns[1].textContent = isLastCard ? 'submit' : 'next';
 }
 
 multistepForm.addEventListener("click", (e) => {
@@ -43,14 +42,15 @@ multistepForm.addEventListener("click", (e) => {
   if (!inputs.every(input => input.reportValidity())) return;
 
   // Submit form
-  if(e.target.matches(`[data-btn-next]`) && currentCard === formCards.length - 1) multistepForm.submit();
+  if (e.target.matches(`[data-btn-next]`) && currentCard === formCards.length - 1) {
+    multistepForm.submit();
+    return;
+  }
 
   // Update currentCard with bounds checking
   currentCard = Math.min(Math.max(currentCard + increment, 0), formCards.length - 1);
 
-  // Update the form's visible card
-  showCurrentCard();
-
-  // Toggle button states based on currentCard position
-  updateButtonStates();
+  updateFormState();
 });
+
+initForm();
