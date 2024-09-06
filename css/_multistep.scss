@@ -23,6 +23,8 @@
 .multistep {
   @include setText;
   position: relative;
+  background: transparent;
+  z-index: 999;
 
   &-header {
     @include setText(bold .8rem $ff, uppercase);

@@ -16,6 +16,30 @@ body {
   justify-content: center;
   align-items: center;
 }
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  inset: 0 0 auto auto;
+  border-top: 15vh solid hsl(210, 11%, 15%);
+  border-right: 15vw solid hsl(210, 11%, 15%);
+  border-bottom: 15vh solid transparent;
+  border-left: 15vw solid transparent;
+}
+body::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  inset: auto auto 0 0;
+  border-top: 15vh solid transparent;
+  border-right: 15vw solid transparent;
+  border-bottom: 15vh solid hsl(210, 11%, 15%);
+  border-left: 15vw solid hsl(210, 11%, 15%);
+}
 
 *, *::before, *::after {
   margin: 0;
@@ -35,12 +59,38 @@ body {
   justify-content: center;
   align-items: center;
 }
+body::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  inset: 0 0 auto auto;
+  border-top: 15vh solid hsl(210, 11%, 15%);
+  border-right: 15vw solid hsl(210, 11%, 15%);
+  border-bottom: 15vh solid transparent;
+  border-left: 15vw solid transparent;
+}
+body::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  inset: auto auto 0 0;
+  border-top: 15vh solid transparent;
+  border-right: 15vw solid transparent;
+  border-bottom: 15vh solid hsl(210, 11%, 15%);
+  border-left: 15vw solid hsl(210, 11%, 15%);
+}
 
 .multistep {
   font: bold 1rem "Courier new", courier, monospace;
   text-transform: none;
   letter-spacing: 0.05rem;
   position: relative;
+  background: transparent;
+  z-index: 999;
 }
 .multistep-header {
   font: bold 0.8rem "Courier new", courier, monospace;

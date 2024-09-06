@@ -7,6 +7,7 @@
 - Return after if statement simplifies code
 - Use functions for gathering code
 - There are default, predefined methods in js for most problems
+- Designing page and todo list shortens and simplifies coding
 - Optimisation process:
   - optimise only working code
   - rewrite names (descriptive name)
@@ -21,7 +22,6 @@
 - Animate card switch
 - HTML or JS Validation
 - Objects
-
 
 # Done
 - Form structure

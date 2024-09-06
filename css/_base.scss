@@ -14,7 +14,34 @@ body {
 }
 
 body {
+  $triangle-size: 15;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    inset: 0 0 auto auto;
+    border-top: #{$triangle-size * 1vh} solid $c-black;
+    border-right: #{$triangle-size * 1vw} solid $c-black;
+    border-bottom: #{$triangle-size * 1vh} solid transparent;
+    border-left: #{$triangle-size * 1vw} solid transparent;  
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 0; 
+    height: 0;
+    inset: auto auto 0 0;
+    border-top: #{$triangle-size * 1vh} solid transparent;
+    border-right: #{$triangle-size * 1vw} solid transparent;
+    border-bottom: #{$triangle-size * 1vh} solid $c-black;
+    border-left: #{$triangle-size * 1vw} solid $c-black;  
+  }
 }
