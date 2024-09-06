@@ -62,12 +62,19 @@
     @include setBorder;
     @include setMargin(padding);
     box-shadow: -$shadow-size-medium $shadow-size-medium black;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
   }
 
   &-buttons {
-    @include setMargin(margin-block);
+    @include setPadding(padding, 1.5rem);
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
   }
 
   &__button {
@@ -91,17 +98,24 @@
 }
 
 .card {
-  display: none;
   @include setBorder(border, none);
+  display: grid;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform .5s,  opacity .3s;
 
   &__header {
     @include setMargin(margin-block);
-    @include setText(bold 1.7rem $ff, uppercase);
+    @include setText(bold $fs-heigh $ff, uppercase);
     text-align: center;
   }
 
   &--active {
-    display: grid;
+    position: relative;
+    opacity: 1;
+    transform: translateX(0);
   }
 
   label {

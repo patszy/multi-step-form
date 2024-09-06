@@ -9,8 +9,14 @@
   font: inherit;
 }
 
+html {
+  font-size: clamp(.5rem, 4vw, 1rem);
+}
+
 body {
   height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 body {

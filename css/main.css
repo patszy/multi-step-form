@@ -7,8 +7,14 @@
   font: inherit;
 }
 
+html {
+  font-size: clamp(0.5rem, 4vw, 1rem);
+}
+
 body {
   height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 body {
@@ -50,8 +56,14 @@ body::after {
   font: inherit;
 }
 
+html {
+  font-size: clamp(0.5rem, 4vw, 1rem);
+}
+
 body {
   height: 100vh;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 body {
@@ -127,11 +139,18 @@ body::after {
   border-radius: 0.4rem;
   padding: 1.5rem;
   box-shadow: -0.3rem 0.3rem black;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
 }
 .multistep-buttons {
-  margin-block: 1.5rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
 .multistep__button {
   border: 1px solid hsl(210, 11%, 15%);
@@ -154,19 +173,26 @@ body::after {
 }
 
 .card {
-  display: none;
   border: none;
   border-radius: 0.4rem;
+  display: grid;
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.3s;
 }
 .card__header {
   margin-block: 1.5rem;
-  font: bold 1.7rem "Courier new", courier, monospace;
+  font: bold 1.4rem "Courier new", courier, monospace;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   text-align: center;
 }
 .card--active {
-  display: grid;
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
 }
 .card label {
   font: bold 1.2rem "Courier new", courier, monospace;
