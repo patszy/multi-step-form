@@ -81,6 +81,10 @@
       transform: translateY($shadow-effect-size);
       box-shadow: 0 $shadow-size-medium - $shadow-effect-size;
     }
+
+    &--hide {
+      visibility: hidden;
+    }
   }
 }
 

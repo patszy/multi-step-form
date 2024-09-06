@@ -99,6 +99,9 @@ body {
   transform: translateY(0.2rem);
   box-shadow: 0 0.1rem;
 }
+.multistep__button--hide {
+  visibility: hidden;
+}
 
 .card {
   display: none;
