@@ -41,7 +41,7 @@ multistepForm.addEventListener('click', (e) => {
 
   // Validate inpust before proceeding
   const inputs = [...formCards[currentCard]?.querySelectorAll(`input`)];
-  if (!inputs.every(input => input.reportValidity())) return;
+  if(!inputs.every(input => input.reportValidity())) return;
 
   // Submit form
   if (e.target.matches(`[data-btn-next]`) && currentCard === formCards.length - 1) {
